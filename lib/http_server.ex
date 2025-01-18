@@ -40,7 +40,7 @@ defmodule ProxEx.HttpServer do
     
     client_socket
     |> read_request()
-    |> generate_response()
+    |> ProxEx.Handler.forward()
     |> write_response(client_socket)
   end
 

@@ -10,7 +10,8 @@ defmodule ProxEx.ServerSup do
   def init(:ok) do
     port = Application.get_env(:prox_ex, :port)
     children = [
-        {ProxEx.HttpServer, port}
+        {ProxEx.HttpServer, port},
+        ProxEx.Handler
     ]
 
     Supervisor.init(children, strategy: :one_for_one)
