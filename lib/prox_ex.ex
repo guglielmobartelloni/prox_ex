@@ -1,18 +1,8 @@
 defmodule ProxEx do
-  @moduledoc """
-  Documentation for `ProxEx`.
-  """
+  use Application
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ProxEx.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    IO.puts "Starting the application"
+    ProxEx.ServerSup.start_link()
   end
 end

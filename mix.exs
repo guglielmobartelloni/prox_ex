@@ -6,6 +6,7 @@ defmodule ProxEx.MixProject do
       app: :prox_ex,
       version: "0.1.0",
       elixir: "~> 1.18",
+      description: "A simple reverse proxy written in Elixir",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -14,7 +15,9 @@ defmodule ProxEx.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {ProxEx, []},
+      env: [port: 4000]
     ]
   end
 
