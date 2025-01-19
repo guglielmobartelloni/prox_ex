@@ -1,21 +1,9 @@
 # ProxEx
 
-**TODO: Add description**
+A reverse proxy server written in Elixir
 
-## Installation
+## TODO
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `prox_ex` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:prox_ex, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/prox_ex>.
-
+- [ ] Pathrewrite
+- [ ] support for SSL/TLS
+- [ ] support for HTTP/2 and HTTP/3
