@@ -27,9 +27,14 @@ defmodule ProxEx.Parser do
     }
   end
 
-  def format_response(%HttpReponse{} = response) do
+  def add_cookie(%HttpReponse{headers: _headers_map} = response, {_key, _value}) do
+    # TODO
+    response
+  end
 
-    response = response
+  def format_response(%HttpReponse{} = response) do
+    response =
+      response
       |> add_header({"Content-Length", "#{String.length(response.body)}"})
 
     formatted_headers =
